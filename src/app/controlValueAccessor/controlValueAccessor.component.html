@@ -1,24 +1,19 @@
-<h1>Customer Edit</h1>
+<h1>coucou</h1>
 <form [formGroup]="customerForm" (ngSubmit)="submit()">
     <div class="form-group">
-        <label>Name</label>
+        <label>Nom</label>
         <required-textbox formControlName="name"></required-textbox>
-        <div class="alert alert-danger" *ngIf="customerForm.controls.name.invalid">First Name is required!</div>
+        <div class="alert alert-danger" *ngIf="customerForm.controls.name.invalid">Prenom doit etre renseigné</div>
     </div>
     <div class="form-group">
-        <label>Phone</label>
+        <label>Telephone</label>
         <phone-textbox formControlName="phone"></phone-textbox>
-        <div class="alert alert-danger" *ngIf="customerForm.controls.phone.errors?.required">Enter a phone number!</div>
-        <div class="alert alert-danger" *ngIf="customerForm.controls.phone.errors?.phone">Enter a valid phone number!</div>
+        <div class="alert alert-danger" *ngIf="customerForm.controls.phone.errors?.required">entrée un numero de telephone</div>
+        <div class="alert alert-danger" *ngIf="customerForm.controls.phone.errors?.phone">Entrée un numéro valide</div>
     </div>
     <br />
-    <button class="btn btn-default" [disabled]="customerForm.invalid">Submit</button>
+    <button class="btn btn-default" [disabled]="customerForm.invalid">Validée</button>
     <br /><br />
     {{ message }}
-    <br /><br />
-    Valid: {{ customerForm.valid}}
-    <br />
-    Pristine: {{ customerForm.pristine }}
-    <br />
-    Touched: {{ customerForm.touched }}
+   
 </form>

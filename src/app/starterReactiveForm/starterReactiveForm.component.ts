@@ -13,7 +13,7 @@ export class StarterReactiveFormComponent implements OnInit {
 
     ngOnInit() { 
         this.customer = {
-            firstName: 'Tina Reactive'
+            firstName: 'thibaud'
         };
 
         this.customerForm = this.formBuilder.group({
@@ -22,7 +22,7 @@ export class StarterReactiveFormComponent implements OnInit {
     }
 
     onSubmit(form: FormGroup) {
-        this.message = 'You typed: ' + form.controls.firstName.value;
+        this.message = 'test' + form.controls.firstName.value;
     }
 
 }

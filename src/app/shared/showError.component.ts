@@ -13,7 +13,7 @@ export class ShowError {
   ngForm: NgForm;
   controlPath: string;
   errorTypes: string[];
-  errors: any = {'required': 'This field is required'};
+  errors: any = {'required': 'messages d erreur'};
 
   constructor(@Host() ngForm: NgForm) { 
     this.ngForm = ngForm; 

@@ -1,31 +1,31 @@
 <div class="container">
   <div *ngIf="!submitted">
-    <h1>Basic Template Driven Form</h1>
+    <h1>Les templates de bases des formulaires</h1>
     <form #heroForm="ngForm" (ngSubmit)="onSubmit(heroForm.value)">
       <div class="form-group">
-        <label for="name">Name</label>
+        <label for="name">Nom</label>
         <input type="text" class="form-control" name="name" ngModel #name="ngModel" required>
-        <div class="alert alert-danger" [hidden]="name.valid || name.pristine">Name is required</div>
+        <div class="alert alert-danger" [hidden]="name.valid || name.pristine">Nom doit être renseigné</div>
       </div>
       <div class="form-group">
         <label for="alterEgo">Alter Ego</label>
         <input type="text" class="form-control" name="alterEgo" ngModel #alterEgo="ngModel" required>
-        <div class="alert alert-danger" [hidden]="alterEgo.valid || alterEgo.pristine">Alter Ego is required</div>
+        <div class="alert alert-danger" [hidden]="alterEgo.valid || alterEgo.pristine">Alter Ego doit etre renseigné</div>
       </div>
       <div class="form-group">
         <label for="power">Hero Power</label>
         <select class="form-control" name="power" ngModel #power="ngModel" required>
           <option *ngFor="let p of powers" [value]="p">{{ p }}</option>
         </select>
-        <div class="alert alert-danger" [hidden]="power.valid || power.pristine">Power is required</div>
+        <div class="alert alert-danger" [hidden]="power.valid || power.pristine">Pouvoir doit etre renseigné</div>
       </div>
-      <button type="submit" class="btn btn-default" [disabled]="!heroForm.valid">Submit</button>
+      <button type="submit" class="btn btn-default" [disabled]="!heroForm.valid">Validation du formulaire</button>
     </form>
   </div>
   <div *ngIf="submitted">
     <h2>You submitted the following:</h2>
     <div class="row">
-      <div class="col-md-2">Name</div>
+      <div class="col-md-2">Nom</div>
       <div class="col-md-10 pull-left">{{ form.name }}</div>
     </div>
     <div class="row">
@@ -33,12 +33,10 @@
       <div class="col-md-10 pull-left">{{ form.alterEgo }}</div>
     </div>
     <div class="row">
-      <div class="col-md-2">Power</div>
+      <div class="col-md-2">Pouvoir</div>
       <div class="col-md-10 pull-left">{{ form.power }}</div>
     </div>
-    <br />
-    Raw output from form.value:
-    <br />
+    
     {{ form | json }}
     <br /><br />
     <button class="btn btn-default" (click)="submitted=false">Edit</button>

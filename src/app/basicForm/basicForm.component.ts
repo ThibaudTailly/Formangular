@@ -12,8 +12,8 @@ export class BasicFormComponent implements OnInit {
   constructor() { }
   
   ngOnInit() {
-    this.powers = ['Really Smart', 'Turbulent Breeze', 
-                'Super Hot', 'Weather Changer'];
+    this.powers = ['Fire Control', 'Magnetism', 
+                'Mind Control'];
   }
 
   onSubmit(form: any)  {

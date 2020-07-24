@@ -20,8 +20,8 @@ export class ReactiveFormComponent implements OnInit {
   ngOnInit() {
       this.model = new Hero(18, 'Dr IQ', 'Really Smart', 'Chuck Overstreet', 'iq@superhero.com');
       
-      this.powers = ['Really Smart', 'Super Flexible', 
-                     'Hypersound', 'Weather Changer'];                     
+    this.powers = ['Fire Control', 'Magnetism',
+      'Mind Control'];                     
                      
       this.heroForm = this.formBuilder.group({
         name:     [this.model.name, Validators.required],

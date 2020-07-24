@@ -14,7 +14,7 @@ export class ControlValueAccessorComponent implements OnInit {
 
     ngOnInit() { 
         this.customer = {
-            firstName: 'Tina Reactive',
+            firstName: 'thibaud',
             phone: '123-123-1234'
         };
 
@@ -25,7 +25,7 @@ export class ControlValueAccessorComponent implements OnInit {
     }
 
     submit() {
-        this.message = 'You entered: ' + 
+        this.message = 'vous avec entrée ' + 
                         this.customerForm.controls.name.value + ' ' + 
                         this.customerForm.controls.phone.value;
     }
